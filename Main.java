@@ -18,9 +18,9 @@ public class Main {
 
         // --- 2. Exibir status inicial (Item 5.2) ---
         System.out.println("--- 2. Status Inicial ---");
-        System.out.println("Status inicial do Carro: " + carro1.getStatus()); [cite: 53]
-        System.out.println("Status inicial da Moto: " + moto1.getStatus()); [cite: 53]
-        System.out.println("Status inicial do Caminhão: " + caminhao1.getStatus()); [cite: 53]
+        System.out.println("Status inicial do Carro: " + carro1.getStatus());
+        System.out.println("Status inicial da Moto: " + moto1.getStatus());
+        System.out.println("Status inicial do Caminhão: " + caminhao1.getStatus());
         System.out.println("\n");
 
 
@@ -28,18 +28,18 @@ public class Main {
         System.out.println("--- 3. Testando Locação ---");
 
         // Testando o Carro
-        carro1.iniciarLocacao(); [cite: 54]
+        carro1.iniciarLocacao();
         System.out.println("Status do Carro após locar: " + carro1.getStatus());
         System.out.println("Disponível? " + carro1.verificarDisponibilidade());
-        carro1.encerrarLocacao(); [cite: 54]
+        carro1.encerrarLocacao();
         System.out.println("Status do Carro após devolver: " + carro1.getStatus());
         System.out.println("Disponível? " + carro1.verificarDisponibilidade());
         System.out.println("-----");
 
         // Testando a Moto
-        moto1.iniciarLocacao(); [cite: 54]
+        moto1.iniciarLocacao();
         System.out.println("Status da Moto após locar: " + moto1.getStatus());
-        moto1.encerrarLocacao(); [cite: 54]
+        moto1.encerrarLocacao();
         System.out.println("Status da Moto após devolver: " + moto1.getStatus());
         System.out.println("-----");
 
@@ -53,15 +53,22 @@ public class Main {
 
         // Carro: R$100.00 com 10% de desconto
         System.out.println("Diária (base) do Carro: R$" + carro1.getValorDiaria());
-        System.out.println("Diária (com desconto) do Carro: R$" + carro1.calcularDiariaComDesconto()); [cite: 55]
+        System.out.println("Diária (com desconto) do Carro: R$" + carro1.calcularDiariaComDesconto());
 
         // Moto: R$80.00 com 5% de desconto (pois tem 125cc)
         System.out.println("Diária (base) da Moto: R$" + moto1.getValorDiaria());
-        System.out.println("Diária (com desconto) da Moto: R$" + moto1.calcularDiariaComDesconto()); [cite: 55]
+        System.out.println("Diária (com desconto) da Moto: R$" + moto1.calcularDiariaComDesconto());
 
         // Caminhão: R$500.00 com 15% de acréscimo
         System.out.println("Diária (base) do Caminhão: R$" + caminhao1.getValorDiaria());
-        System.out.println("Diária (com acréscimo) do Caminhão: R$" + caminhao1.calcularDiariaComDesconto()); [cite: 55]
+        System.out.println("Diária (com acréscimo) do Caminhão: R$" + caminhao1.calcularDiariaComDesconto());
+        System.out.println("\n");
 
+
+        // --- 5. Calcular o seguro (Item 5.5 - NOVO) ---
+        System.out.println("--- 5. Cálculo do Seguro ---");
+        System.out.println("Seguro do Carro: R$" + carro1.calcularSeguro());
+        System.out.println("Seguro da Moto: R$" + moto1.calcularSeguro());
+        System.out.println("Seguro do Caminhão: R$" + caminhao1.calcularSeguro());
     }
 }

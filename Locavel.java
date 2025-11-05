@@ -30,4 +30,25 @@ public interface Locavel {
      * @return true se o status for DISPONIVEL, false caso contrário.
      */
     boolean verificarDisponibilidade();
+
+    /**
+     * Contrato para obter o valor da diária do veículo.
+     * Essencial para que a interface possa ter um método default
+     * que dependa desse valor.
+     */
+    double getValorDiaria();
+
+    /**
+     * Calcula o valor do seguro com base na taxa padrão.
+     * Este é um método "default", o que significa que ele já tem uma
+     * implementação padrão e as classes que implementam a interface
+     * não são obrigadas a reescrevê-lo.
+     * Conforme item 3.
+     *
+     * @return O valor do seguro a ser adicionado.
+     */
+    default double calcularSeguro() {
+        // A taxa é em porcentagem, então dividimos por 100.
+        return getValorDiaria() * (TAXA_SEGURO / 100);
+    }
 }
