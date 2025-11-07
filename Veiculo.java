@@ -1,8 +1,4 @@
-/**
- * Classe Abstrata que serve como modelo (molde) genérico
- * para todos os veículos do sistema.
- * Criado conforme o item 1 da tarefa.
- */
+
 public abstract class Veiculo {
 
     // --- 1. Atributos Obrigatórios (Item 1) ---
@@ -13,10 +9,7 @@ public abstract class Veiculo {
     private StatusVeiculo status; // (Item 1.15) - Usando o Enum que criamos
 
     // --- 2. Construtor (Item 1.17) ---
-    /**
-     * Construtor para inicializar os atributos básicos de um veículo.
-     * O status inicial de todo veículo novo será DISPONIVEL.
-     */
+
     public Veiculo(String placa, String marca, String modelo, double valorDiaria) {
         this.placa = placa;
         this.marca = marca;
@@ -26,18 +19,11 @@ public abstract class Veiculo {
     }
 
     // --- 3. Método Abstrato (Item 1.19) ---
-    /**
-     * Um método abstrato força as classes filhas (Carro, Moto, etc.)
-     * a implementar sua própria lógica de cálculo.
-     *
-     * @return O valor final da diária com o desconto/acréscimo específico.
-     */
+
     public abstract double calcularDiariaComDesconto();
 
     // --- 4. Método Concreto (Item 1.20) ---
-    /**
-     * Exibe um resumo simples das informações do veículo no console.
-     */
+
     public void exibirResumo() {
         System.out.println("--- Resumo do Veículo ---");
         System.out.println("Marca: " + this.marca);
